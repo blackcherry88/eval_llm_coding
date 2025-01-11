@@ -5,4 +5,6 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://blackcherry88.github.io',
                 'git_url': 'https://github.com/blackcherry88/eval_llm_coding',
                 'lib_path': 'eval_llm_coding'},
-  'syms': {'eval_llm_coding.core': {'eval_llm_coding.core.foo': ('core.html#foo', 'eval_llm_coding/core.py')}}}
+  'syms': { 'eval_llm_coding.core': {'eval_llm_coding.core.foo': ('core.html#foo', 'eval_llm_coding/core.py')},
+            'eval_llm_coding.data': { 'eval_llm_coding.data.generate_mixed_gaussian_data': ( 'data.html#generate_mixed_gaussian_data',
+                                                                                             'eval_llm_coding/data.py')}}}
