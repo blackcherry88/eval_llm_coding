@@ -55,13 +55,3 @@ Documentation can be found hosted on this GitHub
 you can find package manager specific guidelines on
 [conda](https://anaconda.org/blackcherry88/eval_llm_coding) and
 [pypi](https://pypi.org/project/eval_llm_coding/) respectively.
-
-## How to use
-
-Fill me in please! Don’t forget code examples:
-
-``` python
-1+1
-```
-
-    2
