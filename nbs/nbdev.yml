@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "eval_llm_coding"
+  site-url: "https://blackcherry88.github.io/eval_llm_coding"
+  description: "Evaluating llm coding common ml capability"
+  repo-branch: main
+  repo-url: "https://github.com/blackcherry88/eval_llm_coding"
