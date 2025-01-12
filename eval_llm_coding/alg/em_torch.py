@@ -7,7 +7,6 @@ __all__ = ['GMM']
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import torch.optim as optim
 from torch.distributions.multivariate_normal import MultivariateNormal
 
 # %% ../../nbs/01_em_torch_openai.ipynb 4
@@ -29,6 +28,10 @@ class GMM(nn.Module):
     def covariances(self):
         return torch.matmul(self.scale_tril, self.scale_tril.transpose(1, 2))
     
+    @property
+    def weights(self):
+        return self.log_weights.softmax(dim=0)
+        
     def _e_step(self, X):
         """Compute responsibilities (E-step)."""
         n_samples = X.shape[0]
@@ -64,5 +67,6 @@ class GMM(nn.Module):
         return self._m_step(X, responsibilities)
     
     def predict(self, X):
-        return self._e_step(X)
+        responsibilities = self._e_step(X)
+        return responsibilities.argmax(dim=1)
 
